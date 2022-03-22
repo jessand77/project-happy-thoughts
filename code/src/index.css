@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.app {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.form {
+  height: 150px;
+  width: 300px;
+  border: 1px solid salmon;
+  margin: 2px;
+}
+
+.card {
+  height: 150px;
+  width: 300px;
+  border: 1px solid green;
+  margin: 2px;
+}
