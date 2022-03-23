@@ -1,10 +1,10 @@
 import React from 'react';
-import FetchAPI from './components/FetchAPI';
+import HappyPage from './components/HappyPage';
 
 export const App = () => {
   return (
     <div className='app'>
-      <FetchAPI />
+      <HappyPage />
     </div>
   )
 }

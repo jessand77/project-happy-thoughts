@@ -1,15 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: 'Syne Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .app {
@@ -17,16 +16,17 @@ code {
   width: 50%;
 }
 
-.form {
-  height: 150px;
+.form, .card {
+  height: 200px;
   width: 300px;
-  border: 1px solid salmon;
   margin: 2px;
+  padding: 5px;
+}
+
+.form {
+  border: 1px solid salmon;
 }
 
 .card {
-  height: 150px;
-  width: 300px;
   border: 1px solid green;
-  margin: 2px;
 }
