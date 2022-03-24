@@ -1,27 +1,26 @@
-import React from 'react';
-import Heart from './Heart';
+import React from 'react'
+import HappyListItem from './HappyListItem'
 
-const HappyList = ({ isLoading, thoughtList }) => {
+const HappyList = ({ isLoading, thoughtList, onHeartClick }) => {
     if (isLoading) {
         return <h1>Loading in progress...</h1>
     }
 
-    const handleClick = () => {
-        alert("You clicked!")
-    }
-
     return (
-        <section>
-          {thoughtList.map((thought) => (
-            <div key={thought._id} className="card">
-                <p>{thought.message}</p>
-                <p>{thought.createdAt}</p>
-                <button onClick={handleClick}><Heart /></button><span> x {thought.hearts}</span>
-            </div>
-          ))}
+        <section className='happy-list'>
+            {thoughtList.map((thought) => (
+                <HappyListItem
+                    key={thought._id}
+                    thoughtId={thought._id}
+                    message={thought.message}
+                    hearts={thought.hearts}
+                    creationDate={thought.createdAt}
+                    onHeartClick={onHeartClick}
+                />
+            ))}
         </section>
-        
+
     )
 }
 
-export default HappyList;
+export default HappyList

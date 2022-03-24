@@ -1,32 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
 
-body {
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey: #DCDCDC;
+  --pink: #ffC0CB;
+}
+
+* {
+  font-size: 16px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  font-family: 'Syne Mono', monospace;
+}
+
+body {
+  font-family: "Syne Mono", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.app {
+.happy-page {
   margin: 0 auto;
-  width: 50%;
+  max-width: 500px;
+  min-width: 375px;
+  display: flex;
+  flex-direction: column;
 }
+
+textarea {
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 0.8rem;
+}
+
+.send-thought-button {
+  background-color: var(--pink);
+  border: none;
+  border-radius: 20px;
+  padding: 0.3rem;
+  margin: 0.5rem 0;
+}
+
 
 .form, .card {
-  height: 200px;
-  width: 300px;
-  margin: 2px;
-  padding: 5px;
-}
+  border: 1px solid var(--black);
+  box-shadow: 0.4rem 0.4rem var(--black);
+  padding: 1rem;
+  margin: 1.875rem auto;
+} 
 
 .form {
-  border: 1px solid salmon;
+  background-color: var(--grey);
 }
 
 .card {
-  border: 1px solid green;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
 }
+
+.card:hover {
+  background-color: pink;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card-bottom-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  margin-right: 0.2rem;
+}
+
+.grey-background {
+  background-color: var(--grey);
+}
+
+.pink-background {
+  background-color: var(--pink);
+}
+

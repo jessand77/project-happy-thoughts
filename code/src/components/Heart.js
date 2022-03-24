@@ -1,9 +1,11 @@
 import React from 'react';
 
 const Heart = () => {
+
     return (
-        <span role="img" aria-label="red heart"> 💖 </span>
+        <span className="heart" role="img" aria-label="heart emoji" aria-hidden="false">❤️</span>
     )
 }
 
 export default Heart;
+
