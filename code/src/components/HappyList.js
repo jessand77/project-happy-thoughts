@@ -7,7 +7,7 @@ const HappyList = ({ isLoading, thoughtList, onHeartClick }) => {
     }
 
     return (
-        <section className='happy-list'>
+        <section className="happy-list">
             {thoughtList.map((thought) => (
                 <HappyListItem
                     key={thought._id}

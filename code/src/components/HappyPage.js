@@ -40,7 +40,7 @@ const HappyPage = () => {
         //     .finally(() => setNewThought(''))
 
 
-        // Is this alternative better?
+        // Is this alternative better than the one above?
         fetch(HAPPY_THOUGHTS_API, options)
             .then((response) => response.json())
             .then((newThought) => {
@@ -54,7 +54,7 @@ const HappyPage = () => {
         postNewThought()
     }
 
-    const handleNewThoughtChange = (event) => setNewThought(event.target.value);
+    const handleNewThoughtChange = (event) => setNewThought(event.target.value)
 
     const handleHeartClick = (thoughtId) => {
         const options = {
@@ -68,7 +68,7 @@ const HappyPage = () => {
     }
 
     return (
-        <main className='happy-page'>
+        <main className="happy-page">
             <h1>Happy Thoughts!</h1>
             <HappyForm
                 onFormSubmit={handleSubmit}

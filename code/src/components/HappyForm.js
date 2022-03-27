@@ -1,5 +1,5 @@
-import React from 'react';
-import Heart from './Heart';
+import React from 'react'
+import Emoji from './Emoji'
 
 const HappyForm = ({ onFormSubmit, newThought, onNewThoughtChange }) => {
 
@@ -24,12 +24,12 @@ const HappyForm = ({ onFormSubmit, newThought, onNewThoughtChange }) => {
                 className='send-thought-button'
                 type="submit"
                 disabled={isSubmitButtonDisabled}>
-                <Heart />
+                <Emoji symbol="❤️" label="heart" />
                 <span className='button-text'>Send Happy Thought</span>
-                <Heart />
+                <Emoji symbol="❤️" label="heart" />
             </button>
         </form>
     )
 }
 
-export default HappyForm;
+export default HappyForm

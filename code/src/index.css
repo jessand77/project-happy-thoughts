@@ -21,7 +21,6 @@ body {
   font-family: 'Roboto Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100%;
 }
 
 .happy-page {
@@ -43,7 +42,7 @@ body {
   margin: 1.5rem 1rem;
 } 
 
-.heart {
+.emoji {
   margin: 0 0.3rem;
 }
 
