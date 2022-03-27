@@ -2,38 +2,38 @@ import React from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import Heart from './Heart'
 
-const HappyListItem = ({ thoughtId, message, hearts, creationDate, onHeartClick }) => {
+const HappyListItem = ({ thoughtId, message, likes, creationDate, onHeartClick }) => {
 
     const creationDateObject = new Date(creationDate)
     const formattedCreationDate = formatDistanceToNow(creationDateObject, { addSuffix: true })
 
     // Two different heart backgrounds depending on if there are likes or not
 
-    const buttonalt1 = (
+    const buttonWithGreyBackground = (
         <button className="heart-button grey-background" onClick={() => onHeartClick(thoughtId)}>
             <Heart />
         </button>
     )
 
-    const buttonalt2 = (
+    const buttonWithPinkBackground = (
         <button className="heart-button pink-background" onClick={() => onHeartClick(thoughtId)}>
             <Heart />
         </button>
     )
 
     return (
-        <div className="card">
+        <article className="card">
             <p>{message}</p>
             <div className='card-bottom'>
                 <div className='card-bottom-left'>
-                    {hearts !== 0 ? buttonalt2 : buttonalt1}
-                    <span> x {hearts}</span>
+                    {likes !== 0 ? buttonWithPinkBackground : buttonWithGreyBackground}
+                    <span> x {likes}</span>
                 </div>
                 <div className='card-bottom-right'>
                     <p>{formattedCreationDate}</p>
                 </div>
             </div>
-        </div>
+        </article>
     )
 }
 

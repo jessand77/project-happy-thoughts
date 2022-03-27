@@ -26,7 +26,6 @@ const HappyPage = () => {
 
 
     const postNewThought = () => {
-
         const options = {
             method: 'POST',
             headers: {
@@ -35,10 +34,19 @@ const HappyPage = () => {
             body: JSON.stringify({ message: newThought })
         }
 
+        // fetch(HAPPY_THOUGHTS_API, options)
+        //     .then((response) => response.json())
+        //     .then(() => getHappyThougths())
+        //     .finally(() => setNewThought(''))
+
+
+        // Is this alternative better?
         fetch(HAPPY_THOUGHTS_API, options)
             .then((response) => response.json())
-            .then(() => getHappyThougths())
-            .finally(() => setNewThought(''))
+            .then((newThought) => {
+                setThoughtList((prevList) => [newThought, ...prevList])
+            })
+            
     }
 
     const handleSubmit = (event) => {
@@ -49,19 +57,19 @@ const HappyPage = () => {
     const handleNewThoughtChange = (event) => setNewThought(event.target.value);
 
     const handleHeartClick = (thoughtId) => {
-
         const options = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' }
         }
 
-        fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts/${thoughtId}/like`, options)
+        fetch(`${HAPPY_THOUGHTS_API}${thoughtId}/like`, options)
             .then((res) => res.json())
             .then(() => getHappyThougths())
     }
 
     return (
         <main className='happy-page'>
+            <h1>Happy Thoughts!</h1>
             <HappyForm
                 onFormSubmit={handleSubmit}
                 newThought={newThought}

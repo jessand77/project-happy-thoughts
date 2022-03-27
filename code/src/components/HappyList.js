@@ -13,7 +13,7 @@ const HappyList = ({ isLoading, thoughtList, onHeartClick }) => {
                     key={thought._id}
                     thoughtId={thought._id}
                     message={thought.message}
-                    hearts={thought.hearts}
+                    likes={thought.hearts}
                     creationDate={thought.createdAt}
                     onHeartClick={onHeartClick}
                 />
