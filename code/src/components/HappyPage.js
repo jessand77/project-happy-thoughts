@@ -34,24 +34,18 @@ const HappyPage = () => {
             body: JSON.stringify({ message: newThought })
         }
 
-        // fetch(HAPPY_THOUGHTS_API, options)
-        //     .then((response) => response.json())
-        //     .then(() => getHappyThougths())
-        //     .finally(() => setNewThought(''))
-
-
-        // Is this alternative better than the one above?
         fetch(HAPPY_THOUGHTS_API, options)
             .then((response) => response.json())
             .then((newThought) => {
                 setThoughtList((prevList) => [newThought, ...prevList])
             })
-            
+
     }
 
     const handleSubmit = (event) => {
         event.preventDefault()
         postNewThought()
+        setNewThought('')
     }
 
     const handleNewThoughtChange = (event) => setNewThought(event.target.value)
