@@ -9,7 +9,8 @@ const HappyPage = () => {
     const [thoughtList, setThoughtList] = useState([])
     const [newThought, setNewThought] = useState('')
 
-    const HAPPY_THOUGHTS_API = 'https://happy-thoughts-technigo.herokuapp.com/thoughts/'
+    const HAPPY_THOUGHTS_API = 'https://jessicas-happy-thoughts-api.herokuapp.com/'
+    // const TECHNIGOS_HAPPY_THOUGHTS_API = 'https://happy-thoughts-technigo.herokuapp.com/thoughts/'
 
     const getHappyThougths = () => {
         setIsLoading(true)
