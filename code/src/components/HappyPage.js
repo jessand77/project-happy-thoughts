@@ -9,7 +9,7 @@ const HappyPage = () => {
 	const [newThought, setNewThought] = useState('');
 
 	const HAPPY_THOUGHTS_API =
-		'https://technigo-backends.onrender.com/happy-thoughts-api/thoughts/';
+		'https://api.jessdev.se/thoughts/';
 
 	const getHappyThougths = () => {
 		setIsLoading(true);
