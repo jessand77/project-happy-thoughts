@@ -9,7 +9,7 @@ const HappyPage = () => {
 	const [newThought, setNewThought] = useState('');
 
 	const HAPPY_THOUGHTS_API =
-		'https://api.jessdev.se/thoughts/';
+		'https://happy-thoughts-api.jessdev.se/thoughts/';
 
 	const getHappyThougths = () => {
 		setIsLoading(true);
